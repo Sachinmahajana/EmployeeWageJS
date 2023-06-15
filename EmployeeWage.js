@@ -7,22 +7,22 @@ let empWage = 0;
 let empHrs = 0;
 let empCheck = Math.floor(Math.random()*10)%3;
 
-switch(empCheck)
+// UC3..Func to Get Working Hrs...
+function GetWorkingHrs()
 {
-    case IsFulltime:
-        empHrs = 8;
-        break;
-    case IsParttime:
-        empHrs = 4;
-        break;
-    default:
+   switch(empCheck)
+   {
+     case IsFulltime:
+       empHrs = 8;
+         return empHrs;
+     case IsParttime:
+       empHrs = 4;
+       return empHrs;
+     default:
         empHrs = 0;
-        break;
+        return empHrs;
+    }
 } 
 //..UC2..Calculate Wage...
-empWage = EmpRatePerHr*empHrs;
-console.log("EmployeeWage is:" + empWage);                   
-
-
-
-
+empWage = EmpRatePerHr*GetWorkingHrs();
+console.log("EmployeeWage is:" + empWage);   
